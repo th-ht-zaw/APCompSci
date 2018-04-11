@@ -1,0 +1,64 @@
+/*
+//TrackoJackos
+//Brian Lin, Thet Htay Zaw
+//APCS2 pd2
+//HW24 -- On the DLL
+//2018-03-24
+ */
+
+/*****************************************************
+ * class DLLNode
+ * Implements a doubly-linked node,
+ * for use in lists and other collection classes.
+ * Stores data of type String
+ *****************************************************/
+
+public class DLLNode 
+{
+    private String _cargo;    //cargo may only be of type String
+    private DLLNode _nextNode, _prevNode; //pointers to next, prev DLLNodes
+
+    // constructor -- initializes instance vars
+    public DLLNode( String value, DLLNode next, DLLNode prev) {
+	_cargo = value;
+	_nextNode = next;
+	_prevNode = prev;
+    }
+    
+    //--------------v  ACCESSORS  v--------------
+    public String getCargo() { return _cargo; }
+
+    public DLLNode getNext() { return _nextNode; }
+
+    public DLLNode getNext() { return _prevNode; }
+    //--------------^  ACCESSORS  ^--------------
+
+    //--------------v  MUTATORS  v--------------
+    public String setCargo( String newCargo ) {
+	String cray = getCargo();
+	_cargo = newCargo;
+	return cray;
+    }
+
+    public DLLNode setNext( DLLNode newNext ) {
+	LLNode moop = getNext();
+	_nextNode = newNext;
+	return moop;
+    }
+
+    public DLLNode setPrev( DLLNode newPrev ) {
+	LLNode hume = getPrev();
+	_prevNode = newPrev;
+	return hume;
+    }
+    //--------------^  MUTATORS  ^--------------
+
+    // override inherited toString
+    public String toString() { return _cargo.toString(); }
+
+    //main method for testing
+    public static void main( String[] args ) {
+
+    }
+    
+}//end class DLLNode
